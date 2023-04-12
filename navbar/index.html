@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+			background: blue;
+		}
+
+		.header {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			flex-flow: row;
+			width: 100%;
+			border: 2px solid white;
+			justify-content: space-around;
+			align-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.header_div_1 {
+			display: none;
+			animation: navbar_div_1_ani 1s linear;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			align-content: center;
+			border: none;
+		}
+
+		.nav_logo {
+			display: none;
+			cursor: pointer;
+		}
+
+		.header_logo {
+			width: 20%;
+			text-align: left;
+		}
+
+		.header_name {
+			width: 20%;
+			text-align: left;
+			color: white;
+			font-family: 'Courier New', Courier, monospace;
+		}
+
+		.navbar {
+			display: flex;
+			justify-content: center;
+			justify-content: space-around;
+			text-align: center;
+			width: 70%;
+		}
+		.navbar a,button{
+			color:white;
+			text-decoration: none;
+			font-size: 22px;
+			font-family: 'Courier New', Courier, monospace;
+			font-weight: bold;
+			border:none;
+			outline: none;
+			background-color: transparent;
+			cursor: pointer;
+			word-wrap: break-word;
+			word-break: break-all;
+		}
+		.navbar a:hover{
+			color: yellow;
+		}
+		.navbar_div_1 a{
+			padding: 14px 16px;
+		}
+		.navbar_div_1 {
+			width: 100% ;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			border: 2px solid white;
+			background-color: #351e29;
+		}
+		.dropbtn_1{
+			font-size: 22px;
+			background-color: transparent;
+			color:white;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			padding: 14px 16px;
+		}
+		.dropbtn:hover{
+			color: yellow;
+		}
+		.dropdown-content{
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			background-color: gray;
+			border: 2px solid white;
+			margin-left: -30px;
+			word-wrap: break-word;
+			word-break: break-all;
+			padding: 5px;
+			z-index: 99;
+		}
+		.dropdown-content a{
+			font-size: 18px;
+			margin-top: 20px;
+		}
+		.dropdown-content_1{
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			background-color: gray;
+			border: 2px solid white;
+			margin-left: -30px;
+			word-wrap: break-word;
+			word-break: break-all;
+			padding: 5px;
+			z-index: 99;
+		}
+		.dropdown-content_1 a{
+			font-size: 18px;
+		}
+		.dropdown:hover .dropdown-content{
+			display: flex;
+		}
+		.dropdown_1:hover .dropdown-content_1{
+			display: flex;
+		}
+		.dropdown:hover .dropdown-content{
+			display: flex;
+		}
+		@keyframes navbar_div_1_ani{
+			from{
+				opacity: 0;
+			}
+			to{
+				opacity: 1;
+			}
+		}
+		@media only screen and (min-width: 1000px) {
+			.header_div_1 {
+				display: none !important;
+			}
+		}
+		@media only screen and (max-width: 1000px) {
+			.nav_logo {
+				display: block;
+			}
+			.navbar {
+				display: none;
+			}
+		}
+		
+
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<div class="header_logo">
+			<img src="logo.png">
+		</div>
+		<div class="header_name">
+			<h1>Techxy</h1>
+		</div>
+		<div class="navbar">
+			<a href="#home">Home</a>
+			<a href="#news">News</a>
+			<div class="dropdown">
+				<button class="dropbtn">Service
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="#">Web Development </a>
+					<a href="#">Software Development</a>
+					<a href="#">Own Product</a>
+					<a href="#">Own Product</a>
+
+				</div>
+			</div>
+		<a href="#news">About</a>	
+		</div>
+		<div class="nav_logo">
+			<img src="navbar.png" onclick="fun()">
+		</div>
+	</div>
+	<div class="header header_div_1">
+		<div class="navbar navbar_div_1">
+			<a href="#home">Home</a>
+			<a href="#news">News</a>
+			<div class="dropdown_1">
+				<button class="dropbtn_1">Service
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content_1">
+					<a href="#">Web Development</a>
+					<a href="#">Software Development</a>
+					<a href="#">Own Product</a>
+				</div>
+			</div>
+			<a href="#news">About</a>
+		</div>
+	</div>
+	<script>
+		function fun() {
+			var header = document.getElementsByClassName("header_div_1")[0];
+			var navbar = document.getElementsByClassName("navbar_div_1")[0];
+			if (header.style.display == "none") {
+				header.style.display = "flex";
+				navbar.style.display = "flex";
+			}
+			else {
+				header.style.display = "none";
+				navbar.style.display = "none";
+			}
+		}
+		fun();
+	</script>
+</body>
+
+</html>
