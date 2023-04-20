@@ -3,6 +3,7 @@
 
 <head>
 	<title>Home Page</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		body {
@@ -119,14 +120,17 @@
 			position: absolute;
 			background-color: gray;
 			border: 2px solid white;
-			margin-left: -30px;
+			margin-left: -60px;
 			word-wrap: break-word;
 			word-break: break-all;
 			padding: 5px;
 			z-index: 99;
+			width: 50%;
 		}
 		.dropdown-content_1 a{
 			font-size: 18px;
+			word-break: normal;
+			word-wrap: normal;
 		}
 		.dropdown:hover .dropdown-content{
 			display: flex;
@@ -158,6 +162,24 @@
 				display: none;
 			}
 		}
+		@media only screen and (max-width: 700px) {
+			.header{
+				flex-wrap: wrap;
+			}
+			.header_logo{
+				border:2px solid white;
+				width: 30%;
+
+			}
+			.header_name{
+				border: 2px solid white;
+				width: 60%;
+				text-align: center;
+			}
+			.dropdown-content_1{
+				width: 60%;
+			}
+		}
 		
 
 	</style>
@@ -170,6 +192,9 @@
 		</div>
 		<div class="header_name">
 			<h1>Techxy</h1>
+		</div>
+		<div class="nav_logo">
+			<img src="navbar.png" onclick="fun()">
 		</div>
 		<div class="navbar">
 			<a href="#home">Home</a>
@@ -188,9 +213,7 @@
 			</div>
 		<a href="#news">About</a>	
 		</div>
-		<div class="nav_logo">
-			<img src="navbar.png" onclick="fun()">
-		</div>
+		
 	</div>
 	<div class="header header_div_1">
 		<div class="navbar navbar_div_1">
@@ -201,8 +224,9 @@
 					<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content_1">
-					<a href="#">Web Development</a>
-					<a href="#">Software Development</a>
+					<a href="#">Web Development Web Development Web Development Web Development</a>
+					<a href="#">Software Development </a>
+					<a href="#">Own Product</a>
 					<a href="#">Own Product</a>
 				</div>
 			</div>
