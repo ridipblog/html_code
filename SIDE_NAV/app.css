@@ -1,0 +1,143 @@
+body {
+  background: #b1f2ee;
+}
+.flex_div {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.side_nav_div {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #070913;
+  overflow-x: hidden;
+  transition: 0.5s;
+  align-content: start;
+}
+.side_nav_div::-webkit-scrollbar {
+  width: 0;
+}
+.side_head_div {
+  width: 100%;
+}
+.side_head_div p {
+  width: 100%;
+  text-align: left;
+  margin: 30px 30px;
+}
+.side_head_div p span {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+}
+.side_head_div p span:first-child {
+  width: 60px;
+  height: 58px;
+  border-radius: 50%;
+  padding: 9px;
+  color: black;
+  background: white;
+  margin-right: 10px;
+}
+.side_btn_div {
+  width: 100%;
+  flex-direction: column;
+  flex-flow: column;
+}
+.side_btn_div button {
+  background: transparent;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  width: 80%;
+  cursor: pointer;
+  text-align: left;
+  transition: 1s;
+  padding: 13px 10px;
+}
+.side_btn_div button span:first-child {
+  width: 20%;
+  text-align: left;
+}
+.side_btn_div button span:last-child {
+  width: 80%;
+  text-align: left;
+}
+.side_btn_div button:hover {
+  border-radius: 10px;
+  background: white;
+  color: black;
+}
+.search_div {
+  width: 80%;
+  background: #26403c;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+.search_div span {
+  width: 12%;
+  text-align: left;
+  color: white;
+}
+.search_div input {
+  width: 88%;
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  background-color: transparent;
+  color: white;
+}
+.content_div {
+  margin-left: 26%;
+  width: 74%;
+  border: 1px solid black;
+  flex-direction: column;
+  flex-flow: column;
+}
+.main_content_div {
+  width: 100%;
+}
+.list_div {
+  width: 90%;
+  box-shadow: 1px 1px 7px grey;
+  border-radius: 5px;
+  background: #effffd;
+  margin-top: 20px;
+  padding: 20px 10px;
+}
+.list_div p {
+  width: 48%;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+.list_div p span {
+  width: 90%;
+  margin-top: 10px;
+}
+.list_div p span:first-child {
+  font-weight: normal;
+}
+.list_div h1 {
+  font-size: 20px;
+  width: 92%;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
